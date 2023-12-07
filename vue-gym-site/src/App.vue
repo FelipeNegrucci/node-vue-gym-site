@@ -2,10 +2,31 @@
 import compHeader from './components/compHeader.vue'
 import compSectionHero from './components/compSectionHero.vue'
 
-import { ref } from 'vue';
+import { ref, onBeforeMount, onMounted } from 'vue'
 
 const headerHeight = ref('62px')
 
+var screenSize = ref({
+    width: null,
+    height: null
+})
+
+function getScreenSize(){
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
+}
+
+onBeforeMount(()=>{
+    screenSize.value = getScreenSize()
+})
+
+onMounted(()=>{
+        window.addEventListener('resize', () => {
+        screenSize.value = getScreenSize()
+    });
+})
 </script>
 
 <template>
