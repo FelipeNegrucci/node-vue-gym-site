@@ -1,10 +1,10 @@
 <script setup>
 import compHeader from './components/compHeader.vue'
+import compSectionHero from './components/compSectionHero.vue'
 
 import { ref } from 'vue';
 
 const headerHeight = ref('62px')
-
 
 </script>
 
@@ -15,7 +15,7 @@ const headerHeight = ref('62px')
         </div>
     </header>
     <main class="container-fluid px-0">
-        
+        <compSectionHero class="text-light" :style="{ paddingTop: headerHeight }"/>
     </main>
     <footer>
 
