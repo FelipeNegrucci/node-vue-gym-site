@@ -8,10 +8,14 @@ const iconSizes = ref({
     brandLogo: '42px',
     acessButton: '20px'
 })
+
+const props = defineProps({
+    screenSizeWidth: Number
+})
 </script>
 
 <template>
-    <div class="row justify-content-between gx-0 h-100 align-items-center">
+    <div class="row justify-content-between gx-0 h-100 align-items-center user-select-none">
 
         <router-link class="col-auto nav-link" to="/">
             <div class="row gx-0">
@@ -22,14 +26,14 @@ const iconSizes = ref({
             </div>
         </router-link>
 
-        <div class="col-auto">
+        <div  class="col-auto">
             <div class="row gx-0">
-                <div class="col-auto nav gap-3 text-capitalize">
+                <div v-if="props.screenSizeWidth > 830" class="col-auto nav gap-3 text-capitalize">
                     <router-link class="nav-link" to="/">sobre</router-link>
                     <router-link class="nav-link" to="/">horários</router-link>
                     <router-link class="nav-link" to="/">contato</router-link>
                 </div>
-                <div class="col-auto ms-4 my-auto btn btn-primary px-4">
+                <div v-if="props.screenSizeWidth > 630" class="col-auto ms-4 my-auto btn btn-primary px-4">
                     <iconUser :width="iconSizes.acessButton" :height="iconSizes.acessButton"/>
                     <span>Acessar</span>
                 </div>

@@ -32,7 +32,7 @@ onMounted(()=>{
 <template>
     <header class="container-fluid px-3 position-absolute" :style="{ height: headerHeight }">
         <div class="container-xxl px-0 h-100">
-            <compHeader class="text-light"/>
+            <compHeader :screenSizeWidth="screenSize.width" class="text-light"/>
         </div>
     </header>
     <main class="container-fluid px-0">
