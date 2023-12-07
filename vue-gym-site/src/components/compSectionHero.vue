@@ -1,5 +1,5 @@
 <script setup>
-
+import iconWhatsapp from './icons/iconWhatsapp.vue'
 </script>
 
 <template>
@@ -16,7 +16,7 @@
                     <div class="hstack gap-4 mx-auto mx-md-0 flex-column flex-sm-row">
                         <div class="btn btn-secondary px-4 py-2 rounded-1 d-flex">
                             <span class="my-auto">Fale Conosco</span>
-                            <iconWhatsapp class="my-auto ms-2"/>
+                            <iconWhatsapp class="my-auto ms-2" width="24px" height="24px"/>
                         </div>
                         <div class="btn btn-outline-secondary px-4 py-2 rounded-1">Veja mais</div>
                     </div>
