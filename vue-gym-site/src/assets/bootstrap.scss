@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,600&family=Roboto+Slab&family=Titillium+Web:wght@900&display=swap');
+
+$primary:       #d41f3d;
+$secondary:     #8D99AE;
+$light:         #EDF2F4;
+$dark:          #2B2D42;
+
+$link-color:    $light;
+
+$font-family-sans-serif:    'Roboto Slab', serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-family:      'Libre Franklin', sans-serif;
+$display-font-family:       'Titillium Web', sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
