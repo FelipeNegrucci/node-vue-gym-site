@@ -1,4 +1,5 @@
 <script setup>
+import buttonMedium from './buttonMedium.vue'
 import iconWhatsapp from './icons/iconWhatsapp.vue'
 </script>
 
@@ -14,11 +15,13 @@ import iconWhatsapp from './icons/iconWhatsapp.vue'
                         <span class="h6">Seja a sua própria inspiração na jornada rumo à sua melhor versão</span>
                     </div>
                     <div class="hstack gap-4 mx-auto mx-md-0 flex-column flex-sm-row">
-                        <div class="btn btn-secondary px-4 py-2 rounded-1 d-flex">
+                        <buttonMedium class="btn-secondary d-flex">
                             <span class="my-auto">Fale Conosco</span>
                             <iconWhatsapp class="my-auto ms-2" width="24px" height="24px"/>
-                        </div>
-                        <div class="btn btn-outline-secondary px-4 py-2 rounded-1">Veja mais</div>
+                        </buttonMedium>
+                        <buttonMedium class="btn-outline-secondary">
+                            <span class="my-auto">Veja Mais</span>
+                        </buttonMedium>
                     </div>
                 </div>
             </div>
@@ -28,9 +31,9 @@ import iconWhatsapp from './icons/iconWhatsapp.vue'
 
 <style scoped>
 .hero-bg-img{
-    height: 480px;
+    height: 520px;
     background-image:
-    linear-gradient(0deg, rgba(43,45,66,0.5) 0%, rgba(43,45,66,0.2) 50%, rgba(43,45,66,0.5) 100%),
+    linear-gradient(0deg, rgba(43,45,66,1) 0%, rgba(43,45,66,0.7) 10%, rgba(43,45,66,0.5) 15%, rgba(43,45,66,0.2) 50%, rgba(43,45,66,0.5) 100%),
         url('../assets/login-workout.jpg');
     background-size: cover;
     background-position: 100% 50%;

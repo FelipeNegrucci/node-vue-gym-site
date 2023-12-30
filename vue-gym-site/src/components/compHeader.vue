@@ -1,4 +1,5 @@
 <script setup>
+import buttonMedium from './buttonMedium.vue'
 import iconBrand from './icons/iconBrand.vue'
 import iconUser from './icons/iconUser.vue'
 
@@ -33,10 +34,10 @@ const props = defineProps({
                     <router-link class="nav-link" to="/">horários</router-link>
                     <router-link class="nav-link" to="/">contato</router-link>
                 </div>
-                <button v-if="props.screenSizeWidth > 630" type="button" class="col-auto ms-4 my-auto btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <iconUser :width="iconSizes.acessButton" :height="iconSizes.acessButton"/>
-                    <span class="text-capitalize">acessar</span>
-                </button>
+                <buttonMedium v-if="props.screenSizeWidth > 630" class="col-auto ms-4 btn-primary d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <iconUser class="my-auto" :width="iconSizes.acessButton" :height="iconSizes.acessButton"/>
+                    <span class="text-capitalize my-auto">acessar</span>
+                </buttonMedium>
             </div>
         </div>
 
