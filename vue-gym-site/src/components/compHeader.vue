@@ -26,7 +26,7 @@ const props = defineProps({
                 <div class="col-auto">
                     <iconBrand :width="iconSizes.brandLogo" :height="iconSizes.brandLogo"/>
                 </div>
-                <div class="col-auto ms-2 h5 my-auto text-uppercase">space sport fitness</div>
+                <div class="col-auto ms-2 h5 my-auto text-uppercase text-light">space sport fitness</div>
             </div>
         </router-link>
 
