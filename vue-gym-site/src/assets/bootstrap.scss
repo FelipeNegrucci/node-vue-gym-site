@@ -7,6 +7,10 @@ $dark:          #2B2D42;
 
 $link-color:    $light;
 
+$focus-ring-opacity:           .25 !default;
+$focus-ring-color:             rgba($secondary, $focus-ring-opacity);
+$input-focus-border-color:     rgba($secondary, .7);
+
 $font-family-sans-serif:    'Roboto Slab', serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $headings-font-family:      'Libre Franklin', sans-serif;
 $display-font-family:       'Titillium Web', sans-serif;
