@@ -3,6 +3,7 @@ import buttonMedium from './buttonMedium.vue'
 import compAccountAccess from './compAccountAccess.vue'
 import iconBrand from './icons/iconBrand.vue'
 import iconUser from './icons/iconUser.vue'
+import iconToggle from './icons/iconToggle.vue'
 
 import { ref } from 'vue';
 
@@ -26,7 +27,7 @@ const props = defineProps({
                 <div class="col-auto">
                     <iconBrand :width="iconSizes.brandLogo" :height="iconSizes.brandLogo"/>
                 </div>
-                <div class="col-auto ms-2 h5 my-auto text-uppercase text-light">space sport fitness</div>
+                <div v-if="props.screenSizeWidth > 430" class="col-auto ms-2 h5 my-auto text-uppercase text-light">space sport fitness</div>
             </div>
         </router-link>
 
@@ -37,10 +38,13 @@ const props = defineProps({
                     <router-link class="nav-link" to="/">horários</router-link>
                     <router-link class="nav-link" to="/">contato</router-link>
                 </div>
-                <buttonMedium v-if="props.screenSizeWidth > 630" class="col-auto ms-4 btn-primary d-flex" data-bs-toggle="modal" data-bs-target="#modalAccountAccess">
+                <buttonMedium v-if="props.screenSizeWidth > 830" class="col-auto ms-4 btn-primary" data-bs-toggle="modal" data-bs-target="#modalAccountAccess">
                     <iconUser class="my-auto" :width="iconSizes.acessButton" :height="iconSizes.acessButton"/>
                     <span class="text-capitalize my-auto">acessar</span>
                 </buttonMedium>
+                <button v-else class="col-auto btn p-0 rounded-0">
+                    <iconToggle aria-expanded="false"/>
+                </button>
             </div>
         </div>
 
