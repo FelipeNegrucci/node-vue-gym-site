@@ -7,7 +7,7 @@ import buttonMedium from './buttonMedium.vue'
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content borde py-4 px-4">
                 <div class="modal-body container-fluid text-dark vstack">
-                    <div class="row row-cols-1 gx-0 text-center mb-4">
+                    <div class="row row-cols-1 gx-0 text-center mb-4 user-select-none">
                         <div class="col mx-auto display-6 fs-3 text-uppercase">acesse sua conta</div>
                         <div class="col mx-auto text-secondary fst-italic mt-1">Tenha acesso a sua ficha de treinos e mais.</div>
                     </div>
