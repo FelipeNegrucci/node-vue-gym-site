@@ -1,5 +1,5 @@
 <template>
-<svg fill="var(--bs-light)" viewBox="0 0 100 60" width="48">
+<svg fill="var(--bs-light)" viewBox="-10 0 100 60" width="48">
     <rect width="80" height="10" x="10" y="0" rx="4"></rect>
     <rect width="80" height="10" x="10" y="25" rx="4"></rect>
     <rect width="80" height="10" x="10" y="50" rx="4"></rect>
@@ -15,7 +15,7 @@ svg{
                     opacity 0ms var(--duration);
         transform-origin: center;
     }
-    &:hover{
+    &[aria-expanded="true"]{
         rect{
             transition: y var(--duration) ease-in,
                     rotate var(--duration) ease-in var(--duration),
