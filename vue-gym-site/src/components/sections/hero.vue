@@ -1,6 +1,6 @@
 <script setup>
-import buttonMedium from './buttonMedium.vue'
-import iconWhatsapp from './icons/iconWhatsapp.vue'
+import buttonMedium from '../standard/button.vue'
+import iconWhatsapp from '../icons/iconWhatsapp.vue'
 </script>
 
 <template>
@@ -34,7 +34,7 @@ import iconWhatsapp from './icons/iconWhatsapp.vue'
     height: 520px;
     background-image:
     linear-gradient(0deg, rgba(43,45,66,1) 0%, rgba(43,45,66,0.7) 10%, rgba(43,45,66,0.5) 15%, rgba(43,45,66,0.2) 50%, rgba(43,45,66,0.5) 100%),
-        url('../assets/login-workout.jpg');
+        url('../../assets//login-workout.jpg');
     background-size: cover;
     background-position: 100% 50%;
 }

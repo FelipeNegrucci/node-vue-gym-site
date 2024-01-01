@@ -1,9 +1,10 @@
 <script setup>
-import buttonMedium from './buttonMedium.vue'
-import compAccountAccess from './compAccountAccess.vue'
-import iconBrand from './icons/iconBrand.vue'
-import iconUser from './icons/iconUser.vue'
-import iconToggle from './icons/iconToggle.vue'
+import modalAccountAccess from '../standard/modalAccountAccess.vue'
+import compNavigation from '../structural/navigation.vue'
+import stdButton from '../standard/button.vue'
+import iconBrand from '../icons/iconBrand.vue'
+import iconUser from '../icons/iconUser.vue'
+import iconToggle from '../icons/iconToggle.vue'
 
 import { ref } from 'vue';
 
@@ -15,10 +16,14 @@ const iconSizes = ref({
 const props = defineProps({
     screenSizeWidth: Number
 })
+
+function toggleNavigation() {
+
+}
 </script>
 
 <template>
-    <compAccountAccess/>
+    <modalAccountAccess/>
 
     <div class="row justify-content-between gx-0 h-100 align-items-center user-select-none">
 
@@ -34,15 +39,13 @@ const props = defineProps({
         <div  class="col-auto">
             <div class="row gx-0">
                 <div v-if="props.screenSizeWidth > 830" class="col-auto nav gap-3 text-capitalize">
-                    <router-link class="nav-link" to="/">sobre</router-link>
-                    <router-link class="nav-link" to="/">horários</router-link>
-                    <router-link class="nav-link" to="/">contato</router-link>
+                    <compNavigation/>
                 </div>
-                <buttonMedium v-if="props.screenSizeWidth > 830" class="col-auto ms-4 btn-primary" data-bs-toggle="modal" data-bs-target="#modalAccountAccess">
+                <stdButton v-if="props.screenSizeWidth > 830" class="col-auto ms-4 btn-primary" data-bs-toggle="modal" data-bs-target="#modalAccountAccess">
                     <iconUser class="my-auto" :width="iconSizes.acessButton" :height="iconSizes.acessButton"/>
                     <span class="text-capitalize my-auto">acessar</span>
-                </buttonMedium>
-                <button v-else class="col-auto btn p-0 rounded-0">
+                </stdButton>
+                <button v-else @click="toggleNavigation" class="col-auto btn px-0 py-2">
                     <iconToggle aria-expanded="false"/>
                 </button>
             </div>

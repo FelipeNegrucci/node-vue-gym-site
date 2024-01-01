@@ -1,5 +1,4 @@
 <script setup>
-import buttonMedium from './buttonMedium.vue'
 </script>
 
 <template>
@@ -21,7 +20,7 @@ import buttonMedium from './buttonMedium.vue'
                         <div class="row">
                             <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputPassword">
+                              <input type="password" class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="row mt-2">
