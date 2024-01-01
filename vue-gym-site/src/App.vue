@@ -5,6 +5,7 @@ import compSectionHero from './components/sections/hero.vue'
 import { ref, onBeforeMount, onMounted } from 'vue'
 
 const headerHeight = ref('62px')
+const widthPadding = ref('px-0 px-md-2 px-xl-3 px-xxl-0')
 
 var screenSize = ref({
     width: null,
@@ -32,11 +33,11 @@ onMounted(()=>{
 <template>
     <header class="container-fluid px-3 position-absolute" :style="{ height: headerHeight }">
         <div class="container-xxl px-0 h-100">
-            <compHeader :screenSizeWidth="screenSize.width"/>
+            <compHeader :screenSizeWidth="screenSize.width" :widthPadding="widthPadding"/>
         </div>
     </header>
     <main class="container-fluid px-0">
-        <compSectionHero class="text-light" :style="{ paddingTop: headerHeight }"/>
+        <compSectionHero class="text-light" :widthPadding="widthPadding" :style="{ paddingTop: headerHeight }"/>
     </main>
     <footer>
 
