@@ -2,7 +2,6 @@
 import modalAccountAccess from '../standard/modalAccountAccess.vue'
 import compNavigation from '../structural/navigation.vue'
 import stdButton from '../standard/button.vue'
-import iconBrand from '../icons/iconBrand.vue'
 import iconUser from '../icons/iconUser.vue'
 import iconToggle from '../icons/iconToggle.vue'
 
@@ -14,23 +13,21 @@ const iconSizes = ref({
 })
 
 const props = defineProps({
-    screenSizeWidth: Number
+    screenSizeWidth: Number,
+    widthPadding: String
 })
-
-function toggleNavigation() {
-
-}
 </script>
 
 <template>
     <modalAccountAccess/>
 
-    <div class="row justify-content-between gx-0 h-100 align-items-center user-select-none">
+    <div class="row justify-content-between gx-0 h-100 align-items-center user-select-none" :class="props.widthPadding">
 
         <router-link class="col-auto nav-link" to="/">
             <div class="row gx-0">
                 <div class="col-auto">
-                    <iconBrand :width="iconSizes.brandLogo" :height="iconSizes.brandLogo"/>
+                    <img src="../../assets/brand-logo.png" width="48">
+                    <!-- <iconBrand :width="iconSizes.brandLogo" :height="iconSizes.brandLogo"/> -->
                 </div>
                 <div v-if="props.screenSizeWidth > 430" class="col-auto ms-2 h5 my-auto text-uppercase text-light">space sport fitness</div>
             </div>
