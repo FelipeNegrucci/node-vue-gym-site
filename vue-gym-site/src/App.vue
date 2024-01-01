@@ -1,6 +1,6 @@
 <script setup>
-import compHeader from './components/compHeader.vue'
-import compSectionHero from './components/compSectionHero.vue'
+import compHeader from './components/structural/header.vue'
+import compSectionHero from './components/sections/hero.vue'
 
 import { ref, onBeforeMount, onMounted } from 'vue'
 
