@@ -1,11 +1,15 @@
 <script setup>
 import buttonMedium from '../standard/button.vue'
 import iconWhatsapp from '../icons/iconWhatsapp.vue'
+
+const props = defineProps({
+    widthPadding: String
+})
 </script>
 
 <template>
     <div class="hero-bg-img container-fluid px-3">
-        <div class="container-xxl px-0 h-100">
+        <div class="container-xxl h-100" :class="props.widthPadding">
             <div class="row gx-0 h-100">
                 <div class="col vstack gap-4 my-auto user-select-none">
                     <span class="gradient-text display-5 text-uppercase text-center text-md-start">space sport fitness</span>
