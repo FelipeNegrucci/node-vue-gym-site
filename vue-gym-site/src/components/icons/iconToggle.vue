@@ -15,9 +15,10 @@ svg{
                     opacity 0ms var(--duration);
         transform-origin: center;
     }
-    &[aria-expanded="true"]{
-        rect{
-            transition: y var(--duration) ease-in,
+}
+
+button[aria-expanded="true"] svg rect{
+    transition: y var(--duration) ease-in,
                     rotate var(--duration) ease-in var(--duration),
                     opacity 0ms var(--duration);
             &:is(:first-child, :last-child){
@@ -32,7 +33,5 @@ svg{
             &:last-child{
                 rotate: -45deg;
             }
-        }
-    }
 }
 </style>
